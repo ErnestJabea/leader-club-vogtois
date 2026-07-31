@@ -82,16 +82,16 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
   <!-- Header Main -->
   <header class="header-main">
     <div class="container nav-wrapper">
+      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Basculer le menu de navigation" aria-expanded="false" aria-controls="primary-menu">
+        <i class="fa-solid fa-bars" id="toggle-icon"></i>
+      </button>
+
       <a href="accueil" class="brand-logo" aria-label="Accueil Leader Club Vogtois">
         <img src="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; max-width: 180px; object-fit: contain; display: inline-block; vertical-align: middle;">
         <div class="brand-text">
           <div class="brand-title">Leader Club Vogtois</div>
         </div>
       </a>
-
-      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Basculer le menu de navigation" aria-expanded="false" aria-controls="primary-menu">
-        <i class="fa-solid fa-bars" id="toggle-icon"></i>
-      </button>
 
       <ul class="main-menu" id="primary-menu">
         <li class="menu-item"><a href="accueil" class="<?php echo ($current_page == 'home') ? 'active' : ''; ?>">Accueil</a></li>
