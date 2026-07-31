@@ -1,10 +1,10 @@
-# Leader Club Vogtois (LCV) - Clean URL Rules
+# Leader Club Vogtois (LCV) - Clean URL Rules for cPanel Subdomain
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.php -f
-  RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+  RewriteRule ^(.*)$ $1.php [L,QSA]
 </IfModule>
 
 Options -Indexes
