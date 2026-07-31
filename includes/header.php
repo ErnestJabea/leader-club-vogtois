@@ -19,7 +19,8 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
   <meta name="theme-color" content="#0F172A">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F172A'/><text x='50%' y='65%' font-size='50' font-weight='bold' fill='%23FCBF11' text-anchor='middle'>LCV</text></svg>">
+  <link rel="icon" type="image/png" href="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png">
+  <link rel="apple-touch-icon" href="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
