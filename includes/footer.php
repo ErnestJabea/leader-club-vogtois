@@ -54,7 +54,7 @@
       <div class="footer-content">
         <div>
           <div class="brand-logo">
-            <img src="assets/images/logo2.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; object-fit: contain;">
+            <img src="/assets/images/logo2.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; object-fit: contain;">
             <div>
               <div class="brand-title" style="color: white;">Leader Club Vogtois</div>
             </div>
@@ -100,6 +100,6 @@
   </footer>
 
   <!-- External JavaScript File -->
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
