@@ -54,7 +54,7 @@
       <div class="footer-content">
         <div>
           <div class="brand-logo">
-            <img src="/assets/images/logo2.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; object-fit: contain;">
+            <img src="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; object-fit: contain;">
             <div>
               <div class="brand-title" style="color: white;">Leader Club Vogtois</div>
             </div>

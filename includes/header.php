@@ -55,7 +55,7 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
     <div class="curtain curtain-right"></div>
     <div class="loader-content">
       <div class="loader-logo-wrapper">
-        <img src="/assets/images/logo2.png" alt="Logo LCV" class="loader-logo">
+        <img src="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png" alt="Logo LCV" class="loader-logo">
       </div>
       <div class="loader-spinner"></div>
     </div>
@@ -83,7 +83,7 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
   <header class="header-main">
     <div class="container nav-wrapper">
       <a href="accueil" class="brand-logo" aria-label="Accueil Leader Club Vogtois">
-        <img src="/assets/images/logo2.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; max-width: 180px; object-fit: contain; display: inline-block; vertical-align: middle;">
+        <img src="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; max-width: 180px; object-fit: contain; display: inline-block; vertical-align: middle;">
         <div>
           <div class="brand-title">Leader Club Vogtois</div>
         </div>
