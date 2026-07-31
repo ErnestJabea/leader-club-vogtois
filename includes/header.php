@@ -84,7 +84,7 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
     <div class="container nav-wrapper">
       <a href="accueil" class="brand-logo" aria-label="Accueil Leader Club Vogtois">
         <img src="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; max-width: 180px; object-fit: contain; display: inline-block; vertical-align: middle;">
-        <div>
+        <div class="brand-text">
           <div class="brand-title">Leader Club Vogtois</div>
         </div>
       </a>

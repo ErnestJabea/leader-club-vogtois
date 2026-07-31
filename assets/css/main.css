@@ -749,6 +749,25 @@ h1, h2, h3, h4, h5, .font-heading {
   .hero-title-large {
     font-size: 38px;
   }
+
+  .brand-text {
+    display: none !important;
+  }
+
+  .top-bar-content {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .nav-wrapper {
+    gap: 8px;
+  }
+
+  .header-main .btn {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
 }
 
 /* ==========================================================================
