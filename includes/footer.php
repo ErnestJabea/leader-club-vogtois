@@ -41,7 +41,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 30px;">
-        <a href="contact?form=partner" class="btn btn-outline" style="font-size: 14px;">
+        <a href="partenaire" class="btn btn-outline" style="font-size: 14px;">
           Devenir un Partenaire Officiel <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
@@ -67,18 +67,18 @@
         <div>
           <h4 class="footer-col-title">Navigation</h4>
           <ul class="footer-menu">
-            <li><a href="index">Accueil</a></li>
-            <li><a href="about">L'Organisation</a></li>
+            <li><a href="accueil">Accueil</a></li>
+            <li><a href="organisation">L'Organisation</a></li>
             <li><a href="actions">Nos Actions</a></li>
-            <li><a href="gallery">Galerie Média</a></li>
+            <li><a href="galerie">Galerie Média</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-col-title">Engagements</h4>
           <ul class="footer-menu">
-            <li><a href="donate">Faire un Don</a></li>
-            <li><a href="contact?form=partner">Devenir Partenaire</a></li>
+            <li><a href="don">Faire un Don</a></li>
+            <li><a href="partenaire">Devenir Partenaire</a></li>
             <li><a href="actions">Concours Math/IT</a></li>
           </ul>
         </div>
@@ -86,7 +86,7 @@
         <div>
           <h4 class="footer-col-title">Transparence</h4>
           <ul class="footer-menu">
-            <li><a href="about">Rapports d'Activité</a></li>
+            <li><a href="organisation">Rapports d'Activité</a></li>
             <li><a href="contact">Contact Direct</a></li>
           </ul>
         </div>

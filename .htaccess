@@ -10,11 +10,25 @@
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-  # Remove .php Extension from URLs for Clean SEO Links
+  # 1. URL Rewriting : Alias / Accès direct (ex: /accueil -> index.php)
+  RewriteRule ^accueil/?$ index.php [NC,L]
+  RewriteRule ^organisation/?$ about.php [NC,L]
+  RewriteRule ^actions/?$ actions.php [NC,L]
+  RewriteRule ^galerie/?$ gallery.php [NC,L]
+  RewriteRule ^rejoindre/?$ contact.php?form=join [NC,L]
+  RewriteRule ^partenaire/?$ contact.php?form=partner [NC,L]
+  RewriteRule ^don/?$ donate.php [NC,L]
+  RewriteRule ^merci/?$ thank-you.php [NC,L]
+
+  # 2. Redirection 301 automatique si l'utilisateur saisit directement .php dans le navigateur
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+)\.php\ HTTP/
+  RewriteRule ^([^/]+)\.php$ /$1 [R=301,L]
+
+  # 3. URL Rewriting Générique : /nom-de-page vers nom-de-page.php
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.php -f
-  RewriteRule ^([^\.]+)$ $1.php [NC,L]
+  RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [NC,L]
 </IfModule>
 
 # Security Headers
