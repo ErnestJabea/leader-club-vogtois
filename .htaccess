@@ -1,7 +1,10 @@
-# Leader Club Vogtois (LCV) - Apache Rules
-# Désactivation de mod_rewrite pour tester l'accès direct sans redirection
+# Leader Club Vogtois (LCV) - Clean URL Rules
 <IfModule mod_rewrite.c>
-  RewriteEngine Off
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.php -f
+  RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
 </IfModule>
 
 Options -Indexes
