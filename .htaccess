@@ -3,32 +3,45 @@
 # Enable Rewrite Engine
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /
 
-  # Force HTTPS Security
-  RewriteCond %{HTTPS} off
-  RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  # Clean URL Rewriting Rules
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^accueil/?$ index.php [L,QSA]
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^organisation/?$ about.php [L,QSA]
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^actions/?$ actions.php [L,QSA]
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^galerie/?$ gallery.php [L,QSA]
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^rejoindre/?$ contact.php?form=join [L,QSA]
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^partenaire/?$ contact.php?form=partner [L,QSA]
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^don/?$ donate.php [L,QSA]
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^merci/?$ thank-you.php [L,QSA]
 
-  # 1. URL Rewriting : Alias / Accès direct (ex: /accueil -> index.php)
-  RewriteRule ^accueil/?$ index.php [NC,L]
-  RewriteRule ^organisation/?$ about.php [NC,L]
-  RewriteRule ^actions/?$ actions.php [NC,L]
-  RewriteRule ^galerie/?$ gallery.php [NC,L]
-  RewriteRule ^rejoindre/?$ contact.php?form=join [NC,L]
-  RewriteRule ^partenaire/?$ contact.php?form=partner [NC,L]
-  RewriteRule ^don/?$ donate.php [NC,L]
-  RewriteRule ^merci/?$ thank-you.php [NC,L]
-
-  # 2. Redirection 301 automatique si l'utilisateur saisit directement .php dans le navigateur
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+)\.php\ HTTP/
-  RewriteRule ^([^/]+)\.php$ /$1 [R=301,L]
-
-  # 3. URL Rewriting Générique : /nom-de-page vers nom-de-page.php
+  # Generic fallback for pages without .php
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.php -f
-  RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [NC,L]
+  RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L,QSA]
 </IfModule>
 
 # Security Headers
