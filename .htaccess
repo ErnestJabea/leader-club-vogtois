@@ -14,7 +14,17 @@
   RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?e-jabbing\.net [NC]
   RewriteRule \.(jpg|jpeg|png|gif|svg|webp)$ - [F,NC,L]
 
-  # 3. Clean URL Rewriting Rules
+  # 3. Clean URL Rewriting Rules (Routes Explicites & Fallback)
+  RewriteRule ^accueil/?$ index.php [NC,L]
+  RewriteRule ^organisation/?$ about.php [NC,L]
+  RewriteRule ^actions/?$ actions.php [NC,L]
+  RewriteRule ^galerie/?$ gallery.php [NC,L]
+  RewriteRule ^rejoindre/?$ contact.php?form=join [NC,L]
+  RewriteRule ^partenaire/?$ contact.php?form=partner [NC,L]
+  RewriteRule ^don/?$ donate.php [NC,L]
+  RewriteRule ^merci/?$ thank-you.php [NC,L]
+
+  # Fallback si le nom du fichier correspond exactement au fichier .php
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.php -f
