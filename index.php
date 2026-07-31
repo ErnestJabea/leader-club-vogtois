@@ -16,8 +16,8 @@ include 'includes/header.php';
         Le Leader Club Vogtois (LCV) réunit les acteurs du changement, promeut l'excellence académique et déploie des initiatives à fort impact pour renforcer le développement communautaire.
       </p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="actions.php" class="btn btn-yellow">Découvrir nos Actions</a>
-        <a href="about.php" class="btn btn-outline" style="color: white; border-color: white;">L'Organisation</a>
+        <a href="actions" class="btn btn-yellow">Découvrir nos Actions</a>
+        <a href="about" class="btn btn-outline" style="color: white; border-color: white;">L'Organisation</a>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ include 'includes/header.php';
         <div class="card-body">
           <h3 class="card-title">Concours Mathématiques & IT</h3>
           <p class="card-text">Stimuler l'excellence scientifique chez les jeunes étudiants avec la remise de prix et bourses d'études.</p>
-          <a href="actions.php" class="btn btn-dark" style="padding: 8px 18px; font-size: 13px;">Voir le programme</a>
+          <a href="actions" class="btn btn-dark" style="padding: 8px 18px; font-size: 13px;">Voir le programme</a>
         </div>
       </div>
 
@@ -71,7 +71,7 @@ include 'includes/header.php';
         <div class="card-body">
           <h3 class="card-title">Conférence Annuelle LCV</h3>
           <p class="card-text">Plateforme stratégique réunissant experts, gouvernance et acteurs civils pour créer des coopérations durables.</p>
-          <a href="actions.php" class="btn btn-dark" style="padding: 8px 18px; font-size: 13px;">Voir les détails</a>
+          <a href="actions" class="btn btn-dark" style="padding: 8px 18px; font-size: 13px;">Voir les détails</a>
         </div>
       </div>
 
@@ -80,7 +80,7 @@ include 'includes/header.php';
         <div class="card-body">
           <h3 class="card-title">Incubateur Associatif</h3>
           <p class="card-text">Mentorat personnalisé et renforcement des capacités pour les nouvelles associations émergentes.</p>
-          <a href="actions.php" class="btn btn-dark" style="padding: 8px 18px; font-size: 13px;">Rejoindre l'incubateur</a>
+          <a href="actions" class="btn btn-dark" style="padding: 8px 18px; font-size: 13px;">Rejoindre l'incubateur</a>
         </div>
       </div>
     </div>
@@ -114,10 +114,10 @@ include 'includes/header.php';
           <a href="#" class="btn btn-yellow" onclick="alert('Biographie du Président : Diplômé de haut niveau en ingénierie et management des organisations, passionné d\'innovation sociale au Cameroun.'); return false;">
             Découvrir ma Biographie <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
           </a>
-          <a href="about.php" class="btn btn-dark">
+          <a href="about" class="btn btn-dark">
             Voir l'Organisation <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
           </a>
-          <a href="contact.php" class="btn btn-outline">
+          <a href="contact" class="btn btn-outline">
             Demander une Audience <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
           </a>
         </div>
@@ -144,7 +144,7 @@ include 'includes/header.php';
           <i class="fa-solid fa-circle-play" style="color: var(--primary-yellow); font-size: 24px;" aria-hidden="true"></i>
           <span style="font-weight: 600; font-size: 15px;">Vidéo Institutionnelle Officielle 2026</span>
         </div>
-        <a href="contact.php" class="btn btn-yellow" style="padding: 8px 20px; font-size: 13px;">
+        <a href="contact" class="btn btn-yellow" style="padding: 8px 20px; font-size: 13px;">
           Soutenir ce Projet <i class="fa-solid fa-heart" aria-hidden="true"></i>
         </a>
       </div>
@@ -160,13 +160,13 @@ include 'includes/header.php';
         <div class="badge-tag"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Galerie & Immersion</div>
         <h2 style="font-size: 36px; color: var(--dark-navy);">Nos moments forts en images</h2>
       </div>
-      <a href="gallery.php" class="btn btn-yellow">
+      <a href="gallery" class="btn btn-yellow">
         Voir plus dans la Galerie <i class="fa-solid fa-images" aria-hidden="true"></i>
       </a>
     </div>
 
     <div class="grid-3">
-      <div class="card-item" style="cursor: pointer;" onclick="window.location.href='gallery.php'">
+      <div class="card-item" style="cursor: pointer;" onclick="window.location.href='gallery'">
         <img src="assets/images/event-leadership.png" class="card-img" alt="Atelier Leadership">
         <div class="card-body">
           <span style="font-size: 12px; font-weight: 700; color: var(--primary-yellow); text-transform: uppercase; letter-spacing: 1px;">Conférences</span>
@@ -175,7 +175,7 @@ include 'includes/header.php';
         </div>
       </div>
 
-      <div class="card-item" style="cursor: pointer;" onclick="window.location.href='gallery.php'">
+      <div class="card-item" style="cursor: pointer;" onclick="window.location.href='gallery'">
         <img src="assets/images/event-math-it.png" class="card-img" alt="Remise des Prix Math">
         <div class="card-body">
           <span style="font-size: 12px; font-weight: 700; color: var(--primary-yellow); text-transform: uppercase; letter-spacing: 1px;">Édition Académique</span>
@@ -184,7 +184,7 @@ include 'includes/header.php';
         </div>
       </div>
 
-      <div class="card-item" style="cursor: pointer;" onclick="window.location.href='gallery.php'">
+      <div class="card-item" style="cursor: pointer;" onclick="window.location.href='gallery'">
         <img src="assets/images/hero-bg.png" class="card-img" alt="Partenariats Stratégiques">
         <div class="card-body">
           <span style="font-size: 12px; font-weight: 700; color: var(--primary-yellow); text-transform: uppercase; letter-spacing: 1px;">Coopération</span>
@@ -202,10 +202,10 @@ include 'includes/header.php';
         <p style="color: rgba(255, 255, 255, 0.8); font-size: 15px; margin: 0;">Que vous souhaitiez devenir membre, parrainer une bourse d'étude ou apporter votre expertise, votre engagement fait la différence.</p>
       </div>
       <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="contact.php?form=join" class="btn btn-yellow">
+        <a href="contact?form=join" class="btn btn-yellow">
           Rejoindre le Club <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
         </a>
-        <a href="donate.php" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: white;">
+        <a href="donate" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: white;">
           Faire un Don / Parrainer <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
         </a>
       </div>

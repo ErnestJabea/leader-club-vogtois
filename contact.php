@@ -45,19 +45,19 @@ include 'includes/header.php';
 <section class="section-padding">
   <div class="container">
     
-    <!-- Navigation par Onglets de Formulaires -->
-    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap;">
-      <a href="contact.php?form=join" class="btn <?php echo ($active_form == 'join') ? 'btn-yellow' : 'btn-outline'; ?>" style="padding: 12px 24px; font-size: 14px;">
+    <!-- Choix du Type de Formulaire -->
+    <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;">
+      <a href="contact?form=join" class="btn <?php echo ($active_form == 'join') ? 'btn-yellow' : 'btn-outline'; ?>" style="padding: 12px 24px; font-size: 14px;">
         <i class="fa-solid fa-user-plus"></i> Nous Rejoindre (Adhésion)
       </a>
-      <a href="contact.php?form=partner" class="btn <?php echo ($active_form == 'partner') ? 'btn-yellow' : 'btn-outline'; ?>" style="padding: 12px 24px; font-size: 14px;">
+      <a href="contact?form=partner" class="btn <?php echo ($active_form == 'partner') ? 'btn-yellow' : 'btn-outline'; ?>" style="padding: 12px 24px; font-size: 14px;">
         <i class="fa-solid fa-handshake"></i> Devenir Partenaire
       </a>
-      <a href="contact.php?form=sponsor" class="btn <?php echo ($active_form == 'sponsor') ? 'btn-yellow' : 'btn-outline'; ?>" style="padding: 12px 24px; font-size: 14px;">
-        <i class="fa-solid fa-hand-holding-heart"></i> Parrainer un Projet / Bourse
+      <a href="contact?form=sponsor" class="btn <?php echo ($active_form == 'sponsor') ? 'btn-yellow' : 'btn-outline'; ?>" style="padding: 12px 24px; font-size: 14px;">
+        <i class="fa-solid fa-graduation-cap"></i> Parrainer une Bourse
       </a>
-      <a href="contact.php?form=general" class="btn <?php echo ($active_form == 'general') ? 'btn-yellow' : 'btn-outline'; ?>" style="padding: 12px 24px; font-size: 14px;">
-        <i class="fa-solid fa-envelope"></i> Contact Général
+      <a href="contact?form=general" class="btn <?php echo ($active_form == 'general') ? 'btn-yellow' : 'btn-outline'; ?>" style="padding: 12px 24px; font-size: 14px;">
+        <i class="fa-solid fa-paper-plane"></i> Contact Général
       </a>
     </div>
 

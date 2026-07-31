@@ -41,7 +41,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 30px;">
-        <a href="contact.php?form=partner" class="btn btn-outline" style="font-size: 14px;">
+        <a href="contact?form=partner" class="btn btn-outline" style="font-size: 14px;">
           Devenir un Partenaire Officiel <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
@@ -67,27 +67,27 @@
         <div>
           <h4 class="footer-col-title">Navigation</h4>
           <ul class="footer-menu">
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="about.php">L'Organisation</a></li>
-            <li><a href="actions.php">Nos Actions</a></li>
-            <li><a href="gallery.php">Galerie Média</a></li>
+            <li><a href="index">Accueil</a></li>
+            <li><a href="about">L'Organisation</a></li>
+            <li><a href="actions">Nos Actions</a></li>
+            <li><a href="gallery">Galerie Média</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-col-title">Engagements</h4>
           <ul class="footer-menu">
-            <li><a href="donate.php">Faire un Don</a></li>
-            <li><a href="contact.php?form=partner">Devenir Partenaire</a></li>
-            <li><a href="actions.php">Concours Math/IT</a></li>
+            <li><a href="donate">Faire un Don</a></li>
+            <li><a href="contact?form=partner">Devenir Partenaire</a></li>
+            <li><a href="actions">Concours Math/IT</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-col-title">Transparence</h4>
           <ul class="footer-menu">
-            <li><a href="about.php">Rapports d'Activité</a></li>
-            <li><a href="contact.php">Contact Direct</a></li>
+            <li><a href="about">Rapports d'Activité</a></li>
+            <li><a href="contact">Contact Direct</a></li>
           </ul>
         </div>
       </div>

@@ -82,7 +82,7 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
   <!-- Header Main -->
   <header class="header-main">
     <div class="container nav-wrapper">
-      <a href="index.php" class="brand-logo" aria-label="Accueil Leader Club Vogtois">
+      <a href="index" class="brand-logo" aria-label="Accueil Leader Club Vogtois">
         <img src="assets/images/logo2.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; max-width: 180px; object-fit: contain; display: inline-block; vertical-align: middle;">
         <div>
           <div class="brand-title">Leader Club Vogtois</div>
@@ -94,18 +94,18 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
       </button>
 
       <ul class="main-menu" id="primary-menu">
-        <li class="menu-item"><a href="index.php" class="<?php echo ($current_page == 'home') ? 'active' : ''; ?>">Accueil</a></li>
-        <li class="menu-item"><a href="about.php" class="<?php echo ($current_page == 'about') ? 'active' : ''; ?>">Organisation</a></li>
-        <li class="menu-item"><a href="actions.php" class="<?php echo ($current_page == 'actions') ? 'active' : ''; ?>">Nos Actions</a></li>
-        <li class="menu-item"><a href="gallery.php" class="<?php echo ($current_page == 'gallery') ? 'active' : ''; ?>">Galerie Média</a></li>
-        <li class="menu-item"><a href="contact.php" class="<?php echo ($current_page == 'contact') ? 'active' : ''; ?>">Contact</a></li>
+        <li class="menu-item"><a href="index" class="<?php echo ($current_page == 'home') ? 'active' : ''; ?>">Accueil</a></li>
+        <li class="menu-item"><a href="about" class="<?php echo ($current_page == 'about') ? 'active' : ''; ?>">Organisation</a></li>
+        <li class="menu-item"><a href="actions" class="<?php echo ($current_page == 'actions') ? 'active' : ''; ?>">Nos Actions</a></li>
+        <li class="menu-item"><a href="gallery" class="<?php echo ($current_page == 'gallery') ? 'active' : ''; ?>">Galerie Média</a></li>
+        <li class="menu-item"><a href="contact" class="<?php echo ($current_page == 'contact') ? 'active' : ''; ?>">Contact</a></li>
       </ul>
 
       <div style="display: flex; gap: 12px; align-items: center;">
-        <a href="donate.php" class="btn btn-yellow" style="padding: 10px 20px; font-size: 14px;">
+        <a href="donate" class="btn btn-yellow" style="padding: 10px 20px; font-size: 14px;">
           <i class="fa-solid fa-heart" aria-hidden="true"></i> Faire un Don
         </a>
-        <a href="contact.php?form=join" class="btn btn-outline" style="padding: 10px 20px; font-size: 14px;">
+        <a href="contact?form=join" class="btn btn-outline" style="padding: 10px 20px; font-size: 14px;">
           Rejoindre <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
