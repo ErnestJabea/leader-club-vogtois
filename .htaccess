@@ -1,48 +1,16 @@
-# Leader Club Vogtois (LCV) - Optimization & Security Rules for cPanel (Apache)
-
-# Enable Rewrite Engine
+# Leader Club Vogtois (LCV) - Minimal Clean Apache Rules
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
 
-  # Clean URL Rewriting Rules
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^accueil/?$ index.php [L,QSA]
-  
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^organisation/?$ about.php [L,QSA]
-  
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^actions/?$ actions.php [L,QSA]
-  
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^galerie/?$ gallery.php [L,QSA]
-  
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^rejoindre/?$ contact.php?form=join [L,QSA]
-  
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^partenaire/?$ contact.php?form=partner [L,QSA]
-  
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^don/?$ donate.php [L,QSA]
-  
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^merci/?$ thank-you.php [L,QSA]
-
-  # Generic fallback for pages without .php
+  # Standard Clean URLs without extension
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.php -f
-  RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L,QSA]
+  RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [NC,L]
 </IfModule>
+
+Options -Indexes
 
 # Security Headers
 <IfModule mod_headers.c>
