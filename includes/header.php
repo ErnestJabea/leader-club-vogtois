@@ -82,30 +82,46 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
   <!-- Header Main -->
   <header class="header-main">
     <div class="container nav-wrapper">
-      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Basculer le menu de navigation" aria-expanded="false" aria-controls="primary-menu">
-        <i class="fa-solid fa-bars" id="toggle-icon"></i>
-      </button>
+      <!-- Groupement Logo + Bouton Hamburger côte à côte à gauche -->
+      <div class="brand-group" style="display: flex; align-items: center; gap: 12px;">
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Basculer le menu de navigation" aria-expanded="false" aria-controls="primary-menu">
+          <i class="fa-solid fa-bars" id="toggle-icon"></i>
+        </button>
 
-      <a href="accueil" class="brand-logo" aria-label="Accueil Leader Club Vogtois">
-        <img src="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; max-width: 180px; object-fit: contain; display: inline-block; vertical-align: middle;">
-        <div class="brand-text">
-          <div class="brand-title">Leader Club Vogtois</div>
-        </div>
-      </a>
+        <a href="accueil" class="brand-logo" aria-label="Accueil Leader Club Vogtois">
+          <img src="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png" alt="Logo Leader Club Vogtois" style="height: 50px; width: auto; max-width: 180px; object-fit: contain; display: inline-block; vertical-align: middle;">
+          <div class="brand-text">
+            <div class="brand-title">Leader Club Vogtois</div>
+          </div>
+        </a>
+      </div>
 
+      <!-- Backdrop Overlay pour fermer le menu mobile en cliquant n'importe où à l'extérieur -->
+      <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
+      <!-- Menu Principal (Drawer latéral gauche) -->
       <ul class="main-menu" id="primary-menu">
-        <li class="menu-item"><a href="accueil" class="<?php echo ($current_page == 'home') ? 'active' : ''; ?>">Accueil</a></li>
-        <li class="menu-item"><a href="organisation" class="<?php echo ($current_page == 'about') ? 'active' : ''; ?>">Organisation</a></li>
-        <li class="menu-item"><a href="actions" class="<?php echo ($current_page == 'actions') ? 'active' : ''; ?>">Nos Actions</a></li>
-        <li class="menu-item"><a href="galerie" class="<?php echo ($current_page == 'gallery') ? 'active' : ''; ?>">Galerie Média</a></li>
-        <li class="menu-item"><a href="contact" class="<?php echo ($current_page == 'contact') ? 'active' : ''; ?>">Contact</a></li>
+        <li class="mobile-menu-header">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="<?php echo SITE_URL; ?>/assets/images/lcv-logo.png" alt="Logo LCV" style="height: 38px;">
+            <span style="font-weight: 700; color: var(--primary-yellow); font-size: 16px;">Leader Club Vogtois</span>
+          </div>
+          <button id="mobile-close-btn" class="mobile-close-btn" aria-label="Fermer le menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </li>
+        <li class="menu-item"><a href="accueil" class="<?php echo ($current_page == 'home') ? 'active' : ''; ?>"><span><i class="fa-solid fa-house" style="margin-right: 8px;"></i> Accueil</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+        <li class="menu-item"><a href="organisation" class="<?php echo ($current_page == 'about') ? 'active' : ''; ?>"><span><i class="fa-solid fa-sitemap" style="margin-right: 8px;"></i> Organisation</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+        <li class="menu-item"><a href="actions" class="<?php echo ($current_page == 'actions') ? 'active' : ''; ?>"><span><i class="fa-solid fa-layer-group" style="margin-right: 8px;"></i> Nos Actions</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+        <li class="menu-item"><a href="galerie" class="<?php echo ($current_page == 'gallery') ? 'active' : ''; ?>"><span><i class="fa-solid fa-images" style="margin-right: 8px;"></i> Galerie Média</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+        <li class="menu-item"><a href="contact" class="<?php echo ($current_page == 'contact') ? 'active' : ''; ?>"><span><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</span> <i class="fa-solid fa-chevron-right"></i></a></li>
       </ul>
 
-      <div style="display: flex; gap: 12px; align-items: center;">
-        <a href="don" class="btn btn-yellow" style="padding: 10px 20px; font-size: 14px;">
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <a href="don" class="btn btn-yellow" style="padding: 10px 16px; font-size: 13px;">
           <i class="fa-solid fa-heart" aria-hidden="true"></i> Faire un Don
         </a>
-        <a href="rejoindre" class="btn btn-outline" style="padding: 10px 20px; font-size: 14px;">
+        <a href="rejoindre" class="btn btn-outline" style="padding: 10px 16px; font-size: 13px;">
           Rejoindre <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
