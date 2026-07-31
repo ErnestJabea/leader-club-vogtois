@@ -99,7 +99,7 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
       <!-- Backdrop Overlay pour fermer le menu mobile en cliquant n'importe où à l'extérieur -->
       <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
 
-      <!-- Menu Principal (Drawer latéral gauche) -->
+      <!-- Menu Principal (Drawer latéral sur mobile, barre standard sur desktop) -->
       <ul class="main-menu" id="primary-menu">
         <li class="mobile-menu-header">
           <div style="display: flex; align-items: center; gap: 10px;">
@@ -110,11 +110,11 @@ $page_description = "Leader Club Vogtois (LCV) - Organisation de référence au 
             <i class="fa-solid fa-xmark"></i>
           </button>
         </li>
-        <li class="menu-item"><a href="accueil" class="<?php echo ($current_page == 'home') ? 'active' : ''; ?>"><span><i class="fa-solid fa-house" style="margin-right: 8px;"></i> Accueil</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-        <li class="menu-item"><a href="organisation" class="<?php echo ($current_page == 'about') ? 'active' : ''; ?>"><span><i class="fa-solid fa-sitemap" style="margin-right: 8px;"></i> Organisation</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-        <li class="menu-item"><a href="actions" class="<?php echo ($current_page == 'actions') ? 'active' : ''; ?>"><span><i class="fa-solid fa-layer-group" style="margin-right: 8px;"></i> Nos Actions</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-        <li class="menu-item"><a href="galerie" class="<?php echo ($current_page == 'gallery') ? 'active' : ''; ?>"><span><i class="fa-solid fa-images" style="margin-right: 8px;"></i> Galerie Média</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-        <li class="menu-item"><a href="contact" class="<?php echo ($current_page == 'contact') ? 'active' : ''; ?>"><span><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+        <li class="menu-item"><a href="accueil" class="<?php echo ($current_page == 'home') ? 'active' : ''; ?>">Accueil</a></li>
+        <li class="menu-item"><a href="organisation" class="<?php echo ($current_page == 'about') ? 'active' : ''; ?>">Organisation</a></li>
+        <li class="menu-item"><a href="actions" class="<?php echo ($current_page == 'actions') ? 'active' : ''; ?>">Nos Actions</a></li>
+        <li class="menu-item"><a href="galerie" class="<?php echo ($current_page == 'gallery') ? 'active' : ''; ?>">Galerie Média</a></li>
+        <li class="menu-item"><a href="contact" class="<?php echo ($current_page == 'contact') ? 'active' : ''; ?>">Contact</a></li>
       </ul>
 
       <div style="display: flex; gap: 10px; align-items: center;">

@@ -189,6 +189,10 @@ h1, h2, h3, h4, h5, .font-heading {
   list-style: none;
 }
 
+.mobile-menu-header {
+  display: none;
+}
+
 .menu-item a {
   text-decoration: none;
   color: var(--dark-navy);
@@ -272,6 +276,26 @@ h1, h2, h3, h4, h5, .font-heading {
 .btn-outline:hover {
   background: var(--dark-navy);
   color: var(--white);
+}
+
+/* Badge Tag Pill */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--primary-yellow);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.badge-tag i {
+  color: var(--primary-yellow);
 }
 
 /* Page Navigation Views (Tab System) */
