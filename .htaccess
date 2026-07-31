@@ -1,10 +1,56 @@
-# Leader Club Vogtois (LCV) - Clean URL Rules for cPanel Subdomain
+# Leader Club Vogtois (LCV) - Optimization, URL Rewriting & Anti-Scraping Rules
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
+
+  # 1. Protection Anti-Aspiration & Blocage des Bots / Scrapers (HTTrack, wget, curl illégal, WebCopier)
+  RewriteCond %{HTTP_USER_AGENT} (HTTrack|Yandex|WebCopier|Fetch|Teleport|SiteSnagger|WebStripper|Offline|wget|libwww-perl|curl|Go-http-client|nikto|sqlninja) [NC]
+  RewriteRule .* - [F,L]
+
+  # 2. Protection Anti-Hotlinking (Empêche l'aspiration et l'intégration externe non autorisée des images)
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?lvc\.e-jabbing\.net [NC]
+  RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?e-jabbing\.net [NC]
+  RewriteRule \.(jpg|jpeg|png|gif|svg|webp)$ - [F,NC,L]
+
+  # 3. Clean URL Rewriting Rules
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.php -f
-  RewriteRule ^(.*)$ $1.php [L,QSA]
+  RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [NC,L]
 </IfModule>
 
+# 4. Protection du Répertoire & Fichiers Sensibles
 Options -Indexes
+
+<FilesMatch "^\.|\.env|config\.php|\.tar\.gz|\.zip$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# 5. En-têtes de Sécurité Avancés (Anti-Clickjacking, Anti-XSS, Anti-MIME Sniffing)
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# 6. Compression Gzip pour Vitesse de Chargement
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# 7. Mise en Cache Navigateur (Performance)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
